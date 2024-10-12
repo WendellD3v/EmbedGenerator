@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Embed Generator</title>
+
+    <meta name="author" content="Wendell Dev">
+    <meta name="description" content="Crie agora um anúncio embed facil e rápido com a Cyber">
+    <meta name="keywords" content="Discord Embed, Discord.js, EmbedGenerator">
+
+    <!-- Links -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo.png" alt="Cyber">
+            <h1>Cyber Scripts - Discord Generator</h1>
+        </nav>
+    </header>
+    
+    <main>
+        <form onsubmit="sendEmbed()">
+            <div class="webhook">
+                <label for="WebhookURL">Webhook URL</label><br>
+                <input type="url" name="WebhookURL" id="WebhookURL" autocomplete="off" required><br>
+                <div class="send-webhook">
+                    <input type="submit" value="Enviar Mensagem">
+                </div>
+                
+            </div>
+
+            <div class="content">
+
+
+                <div class="user-content">
+                    <div class="user_name">
+                        <label for="user_name">Username</label><br>
+                        <input type="text" name="user_name" id="user_name" autocomplete="off"><br>
+                    </div>
+                    <div class="user_avatar">
+                        <label for="user_avatar">Avatar URL</label><br>
+                        <input type="url" name="user_avatar" id="user_avatar" autocomplete="off"><br>
+                    </div>
+                </div>
+                <div class="user-message">
+                    <label for="MenssageContent">Mensagem</label>
+                    <textarea name="MenssageContent" id="MenssageContent" rows="5"></textarea>
+                </div>
+                
+                
+            </div>
+
+            <div class="embed">
+                <div class="embed-Title">
+                    <h1>Embed</h1>
+                </div>
+                
+
+                <div class="embedTitle">
+                    <label for="embedTitle">Title</label><br>
+                    <input type="text" name="embedTitle" id="embedTitle">
+                </div>
+                <div class="embedDescription">
+                    <label for="embedDesc">Descrição</label><br>
+                    <textarea name="embedDesc" id="embedDesc"></textarea>
+                </div>
+            </div>
+            
+        </form>
+    </main>
+    <footer>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
