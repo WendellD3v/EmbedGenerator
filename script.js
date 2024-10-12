@@ -46,9 +46,24 @@ async function sendEmbed(){
                 }
             ]
         })
+    }).then(() =>{
+        info('Enviado!', 'Seu anúncio foi enviado')
     })
+}
 
-    console.log(webhook)
+function info(type, msg){
+    let infobox = document.querySelector('#infobox');
+    infobox.innerHTML = `
+            <h2>${type}</h2>
+            <p>${msg}</p>
+        `;
 
-
+    infobox.classList.add('show');
+    setTimeout(() => {
+        infobox.classList.remove('show');
+        infobox.classList.add('close');
+        setTimeout(() => {
+            infobox.classList.remove('close');
+        }, 1000);
+    }, 2000);
 }
